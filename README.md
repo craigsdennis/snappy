@@ -14,5 +14,5 @@ node snappy.js <URL>
 This will output the HTML to stdout to pipe to other applications or files
 
 ```bash
-node snappy.js spacejam > static.html
+node snappy.js https://spacejam.com > static.html
 ```
