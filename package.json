@@ -1,0 +1,19 @@
+{
+  "name": "snappy",
+  "version": "1.0.0",
+  "description": "Grabs HTML of a rendered JavaScript page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scrape",
+    "javascript",
+    "rendered"
+  ],
+  "author": "Craig Dennis <craigsdennis@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.25.0"
+  }
+}
