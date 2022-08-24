@@ -30,4 +30,5 @@ if (url === undefined) {
   console.error(`Usage: node snappy.js <URL>`);
   process.exit(1);
 }
-snappy(url);
+snappy(url)
+  .catch(err => console.error(err));
