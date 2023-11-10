@@ -1,10 +1,13 @@
 {
   "name": "snappy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Grabs HTML of a rendered JavaScript page",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "snappy": "./bin/index.js"
   },
   "keywords": [
     "scrape",
@@ -14,6 +17,8 @@
   "author": "Craig Dennis <craigsdennis@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "playwright": "^1.25.0"
+    "dotenv": "^16.3.1",
+    "playwright": "^1.39.0",
+    "yargs": "^17.7.2"
   }
 }

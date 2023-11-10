@@ -4,15 +4,32 @@ Simple little helper to access the HTML of a page after any dynamic JavaScript r
 
 This uses [Playwright](https://playwright.dev/)
 
-## Usage
+## Installation
 
 ```bash
 npm install
-node snappy.js <URL>
+npx playwright install
+npm install -g .
+```
+
+## Usage
+
+```bash
+snappy --url https://www.google.com
 ```
 
 This will output the HTML to stdout to pipe to other applications or files
 
 ```bash
-node snappy.js https://spacejam.com > static.html
+snappy --url https://spacejam.com > static.html
 ```
+
+*Optionally*
+
+You can create a CSV file with each row containing `filename, url` and pass it in using the `--file` option.
+
+```bash
+snappy --file example.csv
+```
+
+Files will be stored in the [snaps](./snaps) directory.
