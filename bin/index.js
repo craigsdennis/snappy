@@ -27,10 +27,10 @@ async function run(options) {
     });
     for await (const line of rl) {
       // Cuidado: Simple CSV parsing, probably some edge cases.
-      const [filename, url] = line.split(",");
+      const [filename, url, ...meta] = line.split(",");
       const html = await snappy(url);
       const filePathName = path.join(".", "snaps", filename)
-      console.log(`Saving ${filePathName}`);
+      console.log(`Saving ${filePathName}...`);
       await fs.writeFileSync(filePathName, html);
     }
   } else {
