@@ -6,6 +6,8 @@ This uses [Playwright](https://playwright.dev/)
 
 ## Installation
 
+Copy [.env.example](./.env.example) to `.env` and modify parameters
+
 ```bash
 npm install
 npx playwright install

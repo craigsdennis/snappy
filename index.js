@@ -5,7 +5,8 @@ const { chromium } = require("playwright");
 function requestsAreFinished(page) {
   return new Promise((resolve, reject) => {
     page.on("requestfinished", (data) => {
-      return page.waitForTimeout(parseInt(process.env.TIMEOUT))
+      const waitMS = parseInt(process.env.TIMEOUT) || 1000;
+      return page.waitForTimeout(waitMS)
         .then(() => resolve(data));
     });
 
